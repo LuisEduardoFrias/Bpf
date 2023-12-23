@@ -1,0 +1,96 @@
+.register-cotainer {
+  font-family: Arial, sans-serif;
+  color: var(--purple-950);
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple-400);
+  padding-block: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-block: 15px;
+}
+
+form {
+  min-width: 300px;
+  padding: 20px;
+  border: 1px solid var(--themeBorder);
+  border-radius: 5px;
+  background-color: var(--purple-100);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  color: #333;
+}
+
+input, select {
+  width: 100%;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+}
+
+.custom-input-file {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.custom-input-file input[type="file"] {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+
+#custom-input-file-text-btn {
+ width: 300px;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1fr;
+ grid-template-areas: 'text btn';
+}
+
+#FileText {
+ width: 100%;
+ grid-area: text;
+ align-self: center;
+}
+
+#FileBtn {
+  width: 100%;
+  font-size: 12px;
+  grid-area: btn;
+  align-self: center;
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}

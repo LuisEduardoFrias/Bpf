@@ -1,0 +1,105 @@
+
+.login-cotainer {
+ position: relative;
+ width: 100vw;
+ height: 100vh;
+ 
+ /****** FROM */
+ & form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 65%;
+  min-height: 380px;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  padding: 5px;
+  box-shadow: 0 0 13px 1px var(--purple-600), inset 2px -2px 2px 0 var(--purple-500);
+  background-color: var(--purple-100);
+ 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 170px 1fr 30px;
+  grid-template-areas: "." "header" "main" "fooder";
+  grid-row-gap: 5px;
+ 
+  & fieldset {
+   border: none;
+   width: 100%;
+   height: 100%;
+  }
+  
+  /**** LOGO */
+  & .login-logo {
+   grid-area: header;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   align-content: start;
+
+   & h1 {
+    position: relative;
+    font-size: 100px;
+    font-weight: 900;
+    color: white;
+    height: 100px;
+  
+    & span {
+     position: absolute;
+     text-shadow: 2px 2px 0 #000000;
+     font-style: italic;
+    }
+    & span:nth-child(1) {
+     z-index: 9;
+     transform: translateX(-125%);
+    }
+    & span:nth-child(2) {
+     transform: translateX(-50%);
+     z-index: 8;
+    }
+    & span:nth-child(3) {
+     transform: translateX(25%);
+     z-index: 7;
+    }
+   }
+  }
+  
+  /**** FILDS */
+  & .login-filds {
+   grid-area: main;
+   height: 160px;
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+   & .login-form-group div input {
+    margin-inline-end: 60px;
+    font-size: 15px;
+   }
+   & button {
+    margin-block: 10px;
+    padding: 5px 10px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+   }
+   & button:active {
+    box-shadow: inset 0 0 5px 0 var(--purple-500),
+    inset -5px 0 5px 0 var(--purple-500)
+   }
+  }
+  /*** REGISTER */
+  & .login-register {
+   grid-area: fooder;
+   text-align: center;
+   
+   & span .login-link-register {
+    font-weight: 700;
+    font-style: italic;
+   }
+  }
+ }
+}

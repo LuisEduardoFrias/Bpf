@@ -1,0 +1,58 @@
+
+.card-container {
+ border: 1px solid var(--themeBorder);
+ border-radius: 5px;
+ padding: 5px;
+ margin: 5px;
+ z-index: 8;
+ color: var(--purple-1000);
+ background: var(--purple-600);
+ background: linear-gradient(-15deg, var(--purple-900) 4%, var(--purple-600) 5%, var(--purple-600) 40%, var(--purple-500) 50%);
+ 
+ display: grid;
+ grid-template-columns: 30px 40px 1fr;
+ grid-template-rows: 30px 25px 25px;
+ grid-template-areas: 
+  "icon title title"
+  "cuenta cuenta cuenta"
+  "valance valance value";
+ 
+ &
+ .icon_ {
+  grid-area: icon;
+  animation: move 5s infinite;
+ }
+ & :nth-child(2) {
+  grid-area: title;
+  height: 100%;
+  width: 100%;
+ }
+ & :nth-child(3) {
+  grid-area: cuenta;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+ }
+ & :nth-child(4) {
+  grid-area: valance;
+  height: 100%;
+  width: 100%;
+ }
+ & :nth-child(5) {
+  grid-area: value;
+  height: 100%;
+  width: 100%;
+ }
+}
+
+@keyframes move {
+ 0% {
+  transform: rotate(15deg);
+ }
+ 50% {
+  transform: rotate(-15deg);
+ }
+ 100% {
+  transform: rotate(15deg);
+ }
+}

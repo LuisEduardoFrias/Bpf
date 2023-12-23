@@ -1,0 +1,41 @@
+
+.menu-container_ {
+ position:absolute;
+ width: 100px;
+/* height: 100px; */
+ border: 1px solid black;
+ box-sizing: border-box;
+ border-radius: 3px;
+ box-shadow: inset 0 0 3px 1px var(--menu-shadowI), 1px 1px 5px 1px var(--menu-shadowE1), -1px -1px 5px 1px var(--menu-shadowE2);
+ background-color: var(--menu-background);
+ padding-block-start: 3px;
+ padding-inline: 3px;
+ box-sizing: border-box;
+ 
+ display: flex;
+ flex-direction: column;
+ gap: 3px;
+
+ & .link {
+  height: 25px;
+  width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+  border-inline: none;
+  box-sizing: border-box;
+  font-weight: 800;
+  border-bottom: var(--menuBtn-border);
+  box-shadow: var(--menuBtn-shadow);
+  background-color: var(--menuBtn-background);
+  cursor: pointer;
+  
+  &:hover {
+   background-color: var(--menuBtn-hover);
+  }
+  
+  &:active {
+   background-color: var(--menuBtn-hover);
+  }
+  
+ }
+}
